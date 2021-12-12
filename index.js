@@ -30,11 +30,16 @@ client.on("message", (message) => {
     }
   }
 
-  if (message.content.startsWith(">facebook")) {
+  if (message.content.startsWith(">facebook") || message.content.startsWith(">fb")) {
     client.channels.resolve(general).send(facebook);
   }
 
   if (message.content.startsWith(">tiktok")) {
+    client.channels.resolve(general).send(tiktok);
+  }
+
+  if (message.content.startsWith(">redes")) {
+    client.channels.resolve(general).send(facebook);
     client.channels.resolve(general).send(tiktok);
   }
 
